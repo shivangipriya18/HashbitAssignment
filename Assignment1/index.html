@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Website</title>
+    <style>
+        /* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.social-links a {
+    color: #fff;
+    margin-left: 10px;
+}
+.social-links img{
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    padding: 2px;
+
+}
+
+nav ul {
+    list-style-type: none;
+    background-color: #444;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+aside {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.box {
+    width: 30%;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.box img{
+    background-size: cover;
+    width: 100%;
+}
+.box h2{
+    text-align: center;
+    margin-bottom:18px;
+    color:rgb(10, 10, 134);
+    text-shadow: 1px blur;
+}
+.box:hover{
+    
+    border-radius: 1px solid rgb(209, 204, 204);
+    box-shadow:0 0 10px 5px rgba(0,0,0,0.3);
+    
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+footer img{
+    width:200px;
+}
+footer .copyr{
+    display: inline;
+    width:20px;
+    margin-top:20px;
+    text-align: center;
+}
+.footerlogo{
+    margin-top: 20px;
+}
+.borderline{
+    width:100%;
+    height:1px;   
+    border-bottom:0 none;
+    background-color: white;
+   margin-top:20px;
+
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="images.jpeg" alt="my logo" width="200px"></div>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/company/hashedbit-innovations/"><img src="linkedin.png" alt="linkedin" width="30px"></a>
+            <a href="https://www.instagram.com/hashedbit?igsh=MXBoMnIycmc2dm1jYg=="><img src="insta.jpeg" alt="instagram" width="20px"></a>
+            <!-- Add more social links if needed -->
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="box">
+            <h2>Services</h2>
+            <img src="service.jpg" alt="service">
+            <p>Our comprehensive suite of digital marketing services is designed to increase your online visibility, drive targeted traffic to your website, and ultimately boost conversions and revenue. By leveraging the latest tools and techniques, we ensure that your brand stands out in a crowded digital marketplace, delivering tangible results that align with your business objectives.</p>
+        </div>
+        <div class="box">
+            <h2>Internships</h2>
+            <img src="internship.jpg" alt="internship">
+            <p>Are you eager to gain real-world experience and jumpstart your career in web development and other fields? Look no further than Company's internship program.
+            At HashediBit Innovations, we are committed to providing interns with a meaningful and rewarding experience. Our program is designed to help you grow professionally while making valuable contributions to our team. Join us and take the first step towards a successful career in your chosen field.</p>
+
+        </div>
+        <div class="box">
+            <h2>Training</h2>
+            <img src="training.jpg" alt="training">
+            <p>Unlock your potential and enhance your skills with training programs offered by HashediBit Innovations. Our comprehensive training sessions are designed to equip participants with the knowledge and expertise needed to excel in their respective fields.
+                With HashediBit Innovations, you can trust that you're investing in high-quality training programs that deliver results. Our focus on practical, actionable learning ensures that participants leave our sessions with the skills and confidence to succeed.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <img src="images.jpeg" alt="company logo" class="footerlogo">
+        
+        <div class="borderline"></div>
+        <p class="footpara"><img src="copyright.png" alt="copyright" class="copyr">2024 All Rights Reserved- HashedBitInnovations</p>
+        
+    </footer>
+</body>
+</html>
