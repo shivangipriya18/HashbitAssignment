@@ -1,0 +1,86 @@
+1)->
+ function swapTheme() {
+            var appDiv = document.getElementById('app');
+            var swapButton = document.getElementById('swap');
+
+            if (appDiv.classList.contains('day')) {
+                appDiv.classList.remove('day');
+                appDiv.classList.add('night');
+                swapButton.classList.remove('button_day');
+                swapButton.classList.add('button_night');
+            } else {
+                appDiv.classList.remove('night');
+                appDiv.classList.add('day');
+                swapButton.classList.remove('button_night');
+                swapButton.classList.add('button_day');
+            }
+        }
+
+2)->
+      function createDiv(width, height, text) {
+            var newDiv = document.createElement('div');
+            newDiv.style.width = width + 'px';
+            newDiv.style.height = height + 'px';
+            newDiv.textContent = text;
+            var container = document.getElementById('container');
+            container.appendChild(newDiv);
+        }
+
+
+Window.createDiv = createDiv;
+
+3)->
+  function toggleVisibility() {
+            var paragraph = document.getElementById('useless-paragraph');
+            if (paragraph.style.display === 'none') {
+                paragraph.style.display = 'block';
+            } else {
+                paragraph.style.display = 'none';
+            }
+        }
+
+4)->
+// javascript code goes here
+document.getElementById('colorchange').addEventListener('click', function() {
+    const color = document.getElementById('colorbox').value;
+    document.getElementById('text-container').style.color = color;
+});
+
+document.getElementById('fontsize').addEventListener('input', function() {
+    const size = document.getElementById('fontsize').value;
+    document.getElementById('text-container').style.fontSize = size + 'px';
+});
+
+document.getElementById('italic').addEventListener('click', function() {
+    const textContainer = document.getElementById('text-container');
+    textContainer.style.fontStyle = textContainer.style.fontStyle === 'italic' ? 'normal' : 'italic';
+});
+
+document.getElementById('underline').addEventListener('click', function() {
+    const textContainer = document.getElementById('text-container');
+    textContainer.style.textDecoration = textContainer.style.textDecoration === 'underline' ? 'none' : 'underline';
+});
+
+document.getElementById('bold').addEventListener('click', function() {
+    const textContainer = document.getElementById('text-container');
+    textContainer.style.fontWeight = textContainer.style.fontWeight === 'bold' ? 'normal' : 'bold';
+});
+
+document.getElementById('list').addEventListener('change', function() {
+    const font = document.getElementById('list').value;
+    document.getElementById('text-container').style.fontFamily = font;
+});
+
+document.getElementById('getstyle').addEventListener('click', function() {
+    const textContainer = document.getElementById('text-container');
+    const styles = window.getComputedStyle(textContainer);
+    const cssProps = `
+        color: ${styles.color};
+        font-size: ${styles.fontSize};
+        font-family: ${styles.fontFamily};
+        text-decoration: ${styles.textDecoration};
+        font-style: ${styles.fontStyle};
+        font-weight: ${styles.fontWeight};
+    `;
+    document.getElementById('css-props').textContent = cssProps.replace(/\n\s+/g, ' ');
+});
